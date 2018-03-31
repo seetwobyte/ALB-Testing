@@ -101,6 +101,22 @@ resource "aws_instance" "Bastion_Windows" {
   }
 }
 
+resource "aws_instance" "Jenkins_CI_CD" {
+  ami = "ami-1853ac65"
+  instance_type = "t2.micro"
+  availability_zone = "us-east-1a"
+  associate_public_ip_address = false
+  subnet_id = "${aws_subnet.mgmt_subnet_1.id}"
+  vpc_security_group_ids = ["${aws_security_group.Internal-SG.id}"]
+  monitoring = false
+
+  tags {
+    Name = "Jenkins"
+    Purp = "CI CD"
+  }
+
+
+}
 
 
 ########### Elastic Network Interfaces #################
