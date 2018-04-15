@@ -4,9 +4,8 @@
 resource "aws_elb" "Web-elb" {
   name = "web-elb"
   subnets = [
-    "${aws_subnet.pub_subnet_1.id}",
-    "${aws_subnet.pub_subnet_2.id}"]
-  security_groups = ["${aws_security_group.allow_ssh.id}"]
+    "${aws_subnet.pub_subnet_1.id}", "${aws_subnet.pub_subnet_2.id}"]
+  security_groups = ["${aws_security_group.allow_remote.id}"]
   internal = "false"
   #instances = ["${aws_instance.Nginx-1.id}", "${aws_instance.Nginx-2.id}"]
 
