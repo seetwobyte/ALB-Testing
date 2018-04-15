@@ -77,6 +77,7 @@ resource "aws_instance" "Web_server2" {
 }
 */
 
+/*
 resource "aws_instance" "VPN-Sophos" {
   ami = "ami-0fc06119"
   instance_type = "m4.large"
@@ -108,6 +109,7 @@ resource "aws_instance" "VPN-Sophos-2" {
   }
 
 }
+*/
 
 resource "aws_instance" "Bastion_Windows" {
   ami = "ami-ed14c790"
