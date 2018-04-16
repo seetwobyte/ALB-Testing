@@ -1,4 +1,4 @@
-# test
+# test April 16th
 
 resource "aws_instance" "Nginx-1" {
   ami = "${lookup(var.AMIS, var.AWS_REGION)}"
