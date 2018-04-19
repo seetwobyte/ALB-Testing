@@ -163,7 +163,7 @@ resource "aws_security_group" "test_security_group" {
     protocol = "tcp"
     to_port = 22
     cidr_blocks = [" 209.95.51.22/32", "63.88.1.114/32", "10.10.10.10/32"]
-    security_groups = ["sg-XXXXX"]
+   # security_groups = ["sg-XXXXX"]
 
 
   }
