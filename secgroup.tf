@@ -139,7 +139,7 @@ resource "aws_security_group" "allow_remote" {
   }
   ingress {
     from_port = 22
-    protocol = "tcp"
+    protocol = "tcp",
     to_port = 22
     cidr_blocks = ["209.95.51.22/32"]
   }
